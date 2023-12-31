@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Photo Engine</title>
+    <link rel="stylesheet" href="./chrome.css">
+    <script defer src="./life.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Stunning  images</h1>
+        </div>
+        <div class="inputbox">
+            <form id="form">
+                <input type="text" spellcheck="false" autocomplete="off" required placeholder="search here" id="input">
+                <select id="select">
+                    <option value="all">all</option>
+                    <option value="photo">photo</option>
+                    <option value="illustration">illustration</option>
+                    <option value="vector">vector</option>
+                    <option value="video">video</option>
+                </select>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="fillter">
+            <select id="orderse">
+                <option value="latest">latest</option>
+                <option value="popular">popular</option>
+            </select>
+            <select id="orientationse">
+                <option value="all">all</option>
+                <option value="horizontal">horizontal</option>
+                <option value="vertical">vertical</option>
+            </select>
+            <select id="perpagese">
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="80">80</option>
+            </select>
+        </div>
+        <div id="output"></div>
+        <div class="load" id="load"><img src="./load.svg"></div>
+        <div class="buttonmore">
+            <button class="click">click more</button>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: deepskyblue;
+}
+
+header {
+    width: 100%;
+    height: 25rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+header h1 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.inputbox {
+    margin-top: 2rem;
+}
+
+.inputbox input {
+    width: 50vw;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    font-family: monospace;
+    color: black;
+    font-size: 1rem;
+}
+
+.inputbox input::placeholder {
+    font-family: 'Libre Franklin';
+    font-size: 0.9rem;
+    color: rgb(99, 99, 99);
+    text-transform: uppercase;
+}
+
+.inputbox select {
+    border-radius: 0.2rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.inputbox option {
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+
+main #output {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem;
+}
+
+main .photobox {
+    display: inline;
+    width: 23vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    background-color: transparent;
+    flex-direction: column-reverse;
+}
+
+main .photobox a {
+    text-decoration: none;
+    align-self: end;
+    color: white;
+    background-color: black;
+    padding: 1px 0.5rem;
+}
+
+main .videobox {
+    display: inline;
+    width: 23vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    background-color: transparent;
+}
+
+main .photobox .photo {
+    width: 100%;
+    align-self: start;
+}
+
+main .videobox .video {
+    width: 100%;
+    align-self: start;
+}
+
+.click {
+    grid-column-start: 4;
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    padding: 0.4rem 1rem;
+    color: whitesmoke;
+    font-size: 600;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.buttonmore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.fillter {
+    width: 100%;
+    height: 3rem;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row-reverse;
+    padding: 0 4%;
+    gap: 0 1rem;
+}
+
+.fillter select {
+    border-radius: 0.2rem;
+    height: 1.8rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.fillter option {
+    border: none;
+    outline: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+.error {
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.1rem;
+    background-color: dodgerblue;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+    z-index: 234567;
+}
+
+.load {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.load img {
+    width: 10vw;
+}
+
+@media screen and (max-width: 650px) {
+
+    main #output {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    main .photobox {
+        width: 90vw;
+        margin: 0.5rem 0;
+    }
+    main .videobox {
+        width: 90vw;
+        margin: 0.5rem 0;
+    }
+
+    header {
+        height: 20rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 0;
+    }
+    .inputbox input {
+        width: 75vw;
+        height: 2rem;
+        padding: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .inputbox input::placeholder {
+        font-size: 0.7rem;
+    }
+    
+    .inputbox select {
+        height: 1.5rem;
+        padding: 0 0.8rem;
+        font-size: 0.8rem;
+        width: max-content;
+        align-self: end;
+    }
+    
+    .inputbox option {
+        font-weight: 500;
+        font-size: 0.8rem;
+        background-color: rgb(0, 0, 0);
+        color: rgb(239, 239, 239);
+    }
+
+
+    .fillter {
+        width: 100%;
+        height: 2.5rem;
+        justify-content: space-between;
+        padding: 0 4%;
+    }
+    
+    .fillter select {
+        height: 1.5rem;
+        padding: 0 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    .fillter option {
+        font-weight: 500;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .error {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.2rem;
+    }
+    .load img {
+        width: 20vw;
+    }
+
+    .click {
+        margin: auto;
+    }
+    
+}
